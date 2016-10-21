@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="applicable-device" content="pc">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" type="text/css" media="screen" href="__PUBLIC__/style/style.css"  />
+<script src="__PUBLIC__/style/jquery.min.js"></script>
+<title>练习</title>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+</head>
+<body class="single single-post postid-42805 single-format-standard">
+<include file="Public/head" />
+<div class="wrapper">
+	<div class="content">
+
+<div class="meta">
+	<h1 class="meta-tit">{$arts.title}</h1>
+	<p class="meta-info">发表：<a href="__APP__">{$catename}</a> &nbsp;&nbsp; 发表日期：{$arts.time|date="Y-m-d",###} &nbsp;&nbsp; </p>
+</div>
+
+
+<div>
+<if condition="$prevs">
+<strong>上一篇：</strong>
+<a class="prev-post icon-right" href="__MODULE__/Article/index/id/{$prevs.id}">
+{$prevs.title}</a>
+<else />
+<strong>上一篇：没有了</strong>
+</if>
+</div>
+
+<div style="margin:10px 0;">
+<if condition="$nexts">
+<strong>下一篇：</strong>
+<a class="next-post" href="__MODULE__/Article/index/id/{$nexts.id}">
+{$nexts.title}</a> 
+<else />
+<strong>下一篇：没有了</strong>
+</if>
+</div>
+</div>
+<include file="Public/right" />
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
